@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+	<meta charset='UTF-8' />
+	<style>
+	    body, html { margin:0; padding: 0; overflow:hidden; font-family:Arial; font-size:20px }
+	    @font-face {
+		font-family: '8-bit';
+		src: url('font/8_bit_wonder.ttf') format('truetype');
+	    }	    
+	</style>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/frametimer.js"></script>
+        <script type="text/javascript" src="js/spritesheet.js"></script>
+        <script type="text/javascript" src="js/animation.js"></script>
+        <script type="text/javascript" src="js/constants.js"></script>
+	<script type="text/javascript" src="js/fancywebsocket.js"></script>
+	<script type="text/javascript" src="js/canvaslayers.js"></script>
+	<script type="text/javascript" src="js/nuclear.js"></script>
+
+    </head>
+
+    <body>
+	<div id='body'>
+	    <!-- debug area-->
+	    <div style="background: #000;color:#fff" id="debugArea">
+		    DEBUG<br/>
+		<textarea id='log' name='log' readonly='readonly' STYLE="width:800px;heighT:100px;"></textarea><br/>
+		Message type: <input type='text' id='debugMessageType' name='debugMessageType' />Message Data: <input type='text' id='debugMessageData' name='debugMessageData' /> <input type="button" id="debugButton" value="send"/>
+	    </div>
+	    <div style="background:#efefef; width:640px; height:50px;" id="playerNameArea">	
+		Your name: <input type="text" id="newPlayerName" value="name"  />
+	    </div>
+		
+	    <div style="background:#efefef;width:640px;height:200px;" id="gameListArea">
+		<div style="border:1px solid #0000ff;">
+		    List of games
+		    <ul id="gameLists"></ul>
+		</div>
+	    </div>
+	    
+	    <div style="background:#adadad;width:640px;height:480px;" id="newGameArea">
+		<div style="border:1px solid #0000ff;">
+		    New game options:
+		<input type="button" id="newGameButton" value="newGame" />
+		</div>
+	    </div>
+	    
+	    <div style="background:#adadad;width:640px;height:480px;display:none;" id="gameLobbyArea">
+		<div style="border:1px solid #0000ff;">
+		    Players
+		    <ol id="playersList"></ol>
+		    <input type="button" id="startGameButton" value="start" style="display:none;"/>
+		</div>
+	    </div>
+	    
+
+	</div>
+		    <!-- game area -->
+	    <canvas id="game_area" width="640" height="480"></canvas>
+	    <audio id="sfx_boom" src="sfx/boom.wav" preload="auto"></audio>
+	    <audio id="sfx_build" src="sfx/build.wav" preload="auto"></audio>
+	    <audio id="sfx_chat" src="sfx/chat.wav" preload="auto"></audio>
+	    <audio id="sfx_dish" src="sfx/dish.wav" preload="auto"></audio>
+	    <audio id="sfx_door" src="sfx/door.wav" preload="auto"></audio>
+	    <audio id="sfx_engine" src="sfx/engine.wav" preload="auto"></audio>
+	    <audio id="sfx_engine2" src="sfx/engine2.wav" preload="auto"></audio>
+	    <audio id="sfx_fanfare" src="sfx/fanfare.wav" preload="auto"></audio>
+	    <audio id="sfx_feet" src="sfx/feet.wav" preload="auto"></audio>
+	    <audio id="sfx_missile" src="sfx/missile.wav" preload="auto"></audio>
+	    <audio id="sfx_radio" src="sfx/radio.wav" preload="auto"></audio>
+	    <audio id="sfx_tele1" src="sfx/tele1.wav" preload="auto"></audio>
+	    <audio id="sfx_tele2" src="sfx/tele2.wav" preload="auto"></audio>
+	    <audio id="sfx_tele3" src="sfx/tele3.wav" preload="auto"></audio>
+	    <audio id="sfx_tele4" src="sfx/tele4.wav" preload="auto"></audio>
+	    <audio id="sfx_tele5" src="sfx/tele5.wav" preload="auto"></audio>
+	    <audio id="sfx_telestop" src="sfx/telestop.wav" preload="auto"></audio>
+    </body>
+
+</html>
